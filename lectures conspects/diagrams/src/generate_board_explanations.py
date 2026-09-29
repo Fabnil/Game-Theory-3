@@ -265,9 +265,9 @@ def online_full_information():
                      "Модель полной информации из второй лекции")
     cards = [
         (55, "История", "раунды до $t$", BLUE_BG, BLUE),
-        (340, "Агент", r"выбирает $p^t$", PURPLE_BG, PURPLE),
+        (340, "Агент", r"выбирает $\sigma^t$", PURPLE_BG, PURPLE),
         (625, "Среда", r"задаёт $\ell^t$", AMBER_BG, AMBER),
-        (910, "Выбор", r"$I_t\sim p^t$", GREEN_BG, GREEN),
+        (910, "Выбор", r"$I_t\sim\sigma^t$", GREEN_BG, GREEN),
     ]
     for x, title, formula, fill, edge in cards:
         rect(ax, x, 210, 235, 245, fill, edge)
@@ -279,7 +279,7 @@ def online_full_information():
     txt(ax, 600, 560, r"После выбора агент видит весь вектор $\ell^t$",
         21, GREEN, "bold", "center")
     txt(ax, 600, 604,
-        r"Ожидаемая потеря в раунде: $\langle p^t,\ell^t\rangle$",
+        r"Реальная потеря в раунде: $\ell_{I_t}^t$",
         19, NAVY, align="center")
     save(fig, "02_online-round.svg")
 
@@ -289,8 +289,8 @@ def regret_to_ce():
                      "Результат относится к среднему распределению сыгранных профилей")
     cards = [
         (55, "Повторы", "$T$ раундов", BLUE_BG, BLUE),
-        (340, "Сожаление", "$R_i(T)=o(T)$", PURPLE_BG, PURPLE),
-        (625, "Усреднение", r"$\bar\mu_T=\frac{1}{T}\sum_t\mu_t$", AMBER_BG, AMBER),
+        (340, "Сожаление", r"$R_i^{\rm swap}(T)=o(T)$", PURPLE_BG, PURPLE),
+        (625, "Усреднение", r"$\hat\mu_T=\frac{1}{T}\sum_t\delta_{s^t}$", AMBER_BG, AMBER),
         (910, "Итог", r"$\varepsilon_T$-CE", GREEN_BG, GREEN),
     ]
     for x, title, formula, fill, edge in cards:
@@ -301,10 +301,10 @@ def regret_to_ce():
         arr(ax, (a, 337), (b, 337))
     rect(ax, 155, 530, 890, 98, "white", BORDER)
     txt(ax, 600, 565,
-        r"$\mathbb{E}_{s\sim\bar\mu_T}[u_i(f_i(s_i),s_{-i})-u_i(s)]\leq R_i(T)/T$",
+        r"$\mathbb{E}_{s\sim\hat\mu_T}[u_i(f_i(s_i),s_{-i})-u_i(s)]\leq R_i^{\rm swap}(T)/T$",
         17, NAVY, align="center")
     txt(ax, 600, 602,
-        r"$\varepsilon_T=\max_i R_i(T)/T\longrightarrow 0$",
+        r"$\varepsilon_T=\max_i R_i^{\rm swap}(T)/T\longrightarrow 0$",
         18, GREEN, "bold", "center")
     save(fig, "02_regret-to-ce.svg")
 
