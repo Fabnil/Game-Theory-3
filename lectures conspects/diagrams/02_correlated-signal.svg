@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Коррелированный сигнал в Chicken Game</title>
+  <desc id="desc">Посредник случайно выбирает один из трёх профилей Stop Stop, Stop Go, Go Stop с вероятностью одна треть и сообщает каждому игроку только его собственное действие.</desc>
+  <rect width="1200" height="650" rx="24" fill="#f8fafc"/>
+  <text x="60" y="65" font-family="Arial,Helvetica,sans-serif" font-size="35" font-weight="700" fill="#14243c">Как работает коррелированный сигнал</text>
+  <text x="60" y="105" font-family="Arial,Helvetica,sans-serif" font-size="21" fill="#475569">Пример Chicken Game: посредник выбирает профиль и посылает две приватные рекомендации</text>
+  <rect x="417" y="140" width="366" height="78" rx="16" fill="#1e293b"/>
+  <text x="600" y="173" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#fff">Посредник</text>
+  <text x="600" y="200" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="19" fill="#dbeafe">μ(S,S) = μ(S,G) = μ(G,S) = ⅓</text>
+  <g stroke="#94a3b8" stroke-width="3" fill="none">
+    <path d="M500 218 L220 270"/><path d="M600 218 L600 270"/><path d="M700 218 L980 270"/>
+  </g>
+  <g fill="#64748b"><path d="M220 270 l-7 -12 l15 3z"/><path d="M600 270 l-7 -12 h14z"/><path d="M980 270 l-8 -12 l15 -3z"/></g>
+  <g font-family="Arial,Helvetica,sans-serif">
+    <rect x="65" y="275" width="310" height="218" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+    <rect x="445" y="275" width="310" height="218" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+    <rect x="825" y="275" width="310" height="218" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="220" y="320" text-anchor="middle" font-size="27" font-weight="700" fill="#14243c">(Stop, Stop)</text>
+    <text x="600" y="320" text-anchor="middle" font-size="27" font-weight="700" fill="#14243c">(Stop, Go)</text>
+    <text x="980" y="320" text-anchor="middle" font-size="27" font-weight="700" fill="#14243c">(Go, Stop)</text>
+    <text x="220" y="350" text-anchor="middle" font-size="19" fill="#64748b">вероятность ⅓</text>
+    <text x="600" y="350" text-anchor="middle" font-size="19" fill="#64748b">вероятность ⅓</text>
+    <text x="980" y="350" text-anchor="middle" font-size="19" fill="#64748b">вероятность ⅓</text>
+    <rect x="94" y="376" width="250" height="42" rx="10" fill="#dbeafe"/>
+    <rect x="94" y="430" width="250" height="42" rx="10" fill="#dcfce7"/>
+    <rect x="474" y="376" width="250" height="42" rx="10" fill="#dbeafe"/>
+    <rect x="474" y="430" width="250" height="42" rx="10" fill="#dcfce7"/>
+    <rect x="854" y="376" width="250" height="42" rx="10" fill="#dbeafe"/>
+    <rect x="854" y="430" width="250" height="42" rx="10" fill="#dcfce7"/>
+    <g font-size="19" font-weight="600">
+      <text x="219" y="403" text-anchor="middle" fill="#1d4ed8">Алисе: Stop</text>
+      <text x="219" y="457" text-anchor="middle" fill="#15803d">Бобу: Stop</text>
+      <text x="599" y="403" text-anchor="middle" fill="#1d4ed8">Алисе: Stop</text>
+      <text x="599" y="457" text-anchor="middle" fill="#15803d">Бобу: Go</text>
+      <text x="979" y="403" text-anchor="middle" fill="#1d4ed8">Алисе: Go</text>
+      <text x="979" y="457" text-anchor="middle" fill="#15803d">Бобу: Stop</text>
+    </g>
+  </g>
+  <rect x="65" y="515" width="1070" height="115" rx="14" fill="#eef2ff"/>
+  <text x="600" y="548" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" fill="#312e81">Каждый игрок видит только собственную рекомендацию</text>
+  <text x="600" y="577" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="19" fill="#4338ca">α = μ(S,S), β = μ(S,G), γ = μ(G,S), δ = μ(G,G) = 0</text>
+  <text x="600" y="606" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="19" fill="#4338ca">Послушание: β ≥ α, γ ≥ α, β ≥ δ, γ ≥ δ</text>
+</svg>

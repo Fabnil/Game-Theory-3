@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 650" role="img" aria-labelledby="title desc">
+  <title id="title">Порядок онлайн-раунда и два режима обратной связи</title>
+  <desc id="desc">Сначала агент видит историю и объявляет распределение, затем среда назначает вектор потерь, после чего случайно выбирается действие. Полная информация открывает весь вектор потерь, а бандит только потерю выбранного действия.</desc>
+  <rect width="1400" height="650" rx="24" fill="#f8fafc"/>
+  <text x="55" y="66" font-family="Arial,Helvetica,sans-serif" font-size="35" font-weight="700" fill="#14243c">Порядок событий в одном раунде</text>
+  <text x="55" y="106" font-family="Arial,Helvetica,sans-serif" font-size="21" fill="#475569">Среда видит распределение pᵗ, но не знает будущий случайный выбор Iₜ</text>
+  <g font-family="Arial,Helvetica,sans-serif">
+    <rect x="50" y="178" width="225" height="185" rx="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+    <rect x="320" y="178" width="225" height="185" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <rect x="590" y="178" width="225" height="185" rx="18" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <rect x="860" y="178" width="225" height="185" rx="18" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <g font-size="26" font-weight="700" fill="#14243c" text-anchor="middle">
+      <text x="162" y="220">1. История</text><text x="432" y="220">2. Агент</text><text x="702" y="220">3. Среда</text><text x="972" y="220">4. Случайность</text>
+    </g>
+    <g font-size="21" fill="#334155" text-anchor="middle">
+      <text x="162" y="275">известны раунды</text><text x="162" y="305">1,…,t−1</text>
+      <text x="432" y="275">объявляет pᵗ</text><text x="432" y="305">по N действиям</text>
+      <text x="702" y="275">назначает ℓᵗ</text><text x="702" y="305">видя pᵗ</text>
+      <text x="972" y="275">Iₜ ∼ pᵗ</text><text x="972" y="305">потеря действия Iₜ</text>
+    </g>
+  </g>
+  <g stroke="#64748b" stroke-width="4" fill="none"><path d="M276 270 H309"/><path d="M546 270 H579"/><path d="M816 270 H849"/><path d="M1086 270 H1124"/></g>
+  <g fill="#64748b"><path d="M309 270 l-12 -8 v16z"/><path d="M579 270 l-12 -8 v16z"/><path d="M849 270 l-12 -8 v16z"/><path d="M1124 270 l-12 -8 v16z"/></g>
+  <g font-family="Arial,Helvetica,sans-serif">
+    <rect x="1125" y="172" width="235" height="93" rx="16" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <rect x="1125" y="285" width="235" height="93" rx="16" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+    <text x="1242" y="207" text-anchor="middle" font-size="21" font-weight="700" fill="#166534">Полная информация</text>
+    <text x="1242" y="238" text-anchor="middle" font-size="21" fill="#166534">весь вектор ℓᵗ</text>
+    <text x="1242" y="320" text-anchor="middle" font-size="21" font-weight="700" fill="#991b1b">Бандит</text>
+    <text x="1242" y="351" text-anchor="middle" font-size="21" fill="#991b1b">только свой результат</text>
+  </g>
+  <rect x="50" y="435" width="1310" height="144" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="80" y="478" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#14243c">Что меняется в обучении?</text>
+  <text x="80" y="515" font-family="Arial,Helvetica,sans-serif" font-size="21" fill="#334155">Greedy, RG и RWM в лекции обновляют оценки всех действий, поэтому используют полную информацию.</text>
+  <text x="80" y="548" font-family="Arial,Helvetica,sans-serif" font-size="21" fill="#334155">В бандитном режиме данные о невыбранных действиях надо оценивать или исследовать отдельно.</text>
+</svg>
